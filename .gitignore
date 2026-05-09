@@ -1,0 +1,20 @@
+# Build output
+cpp-radio-pipeline/bin/
+cpp-radio-pipeline/obj/
+build/
+
+# Audio/generated files
+clips/
+*.wav
+*.mp3
+*.log
+
+# Secrets/env
+.env
+
+# OS/editor
+.vscode/
+.DS_Store
+
+# Docker/MySQL data
+mysql_data/
