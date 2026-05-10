@@ -1,18 +1,22 @@
 services:
   mysql:
     image: mysql:8.0
-
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: radio_monitor
       MYSQL_USER: radio_user
       MYSQL_PASSWORD: radio_pass
-
     ports:
       - "3307:3306"
-
     volumes:
       - mysql_data:/var/lib/mysql
+
+  transcription:
+    build: ./trans
+    ports:
+      - "6000:6000"
+    volumes:
+      - ./clips:/app/clips
 
 volumes:
   mysql_data:

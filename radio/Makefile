@@ -2,7 +2,7 @@ CXX = g++
 
 CXXFLAGS = -std=c++17 -Wall -Iinclude
 
-LIBS = -lcurl -lmysqlclient
+LIBS = -lcurl -lmysqlclient -pthread
 
 SRC = $(wildcard src/*.cpp)
 
